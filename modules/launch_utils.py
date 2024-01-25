@@ -284,8 +284,8 @@ def requirements_met(requirements_file):
     are already installed. Returns True if so, False if not installed or parsing fails.
     """
 
-    import importlib.metadata
-    import packaging.version
+    from importlib import metadata
+    from packaging import version
 
     with open(requirements_file, "r", encoding="utf8") as file:
         for line in file:
@@ -303,11 +303,11 @@ def requirements_met(requirements_file):
                 continue
 
             try:
-                version_installed = importlib.metadata.version(package)
+                version_installed = metadata.version(package)
             except Exception:
                 return False
 
-            if packaging.version.parse(version_required) != packaging.version.parse(version_installed):
+            if version.parse(version_required) != version.parse(version_installed):
                 return False
 
     return True
