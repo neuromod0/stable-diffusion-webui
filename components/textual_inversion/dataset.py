@@ -10,7 +10,8 @@ from random import shuffle, choices
 
 import random
 import tqdm
-from modules import devices, shared
+from utils import devices
+from components import shared
 import re
 
 from ldm.modules.distributions.distributions import DiagonalGaussianDistribution
