@@ -2,7 +2,8 @@ import os
 
 import gradio as gr
 
-from components import errors, shared
+from components import  shared
+from utils import errors
 from components.paths_internal import script_path
 
 
