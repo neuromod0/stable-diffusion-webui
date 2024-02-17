@@ -13,7 +13,7 @@ from fastapi.exceptions import HTTPException
 
 from components.generation_parameters_copypaste import image_from_url_text
 from ui.ui_components import ToolButton
-from ui impor ui_extra_networks_user_metadata
+from ui import ui_extra_networks_user_metadata
 
 extra_pages = []
 allowed_dirs = set()
