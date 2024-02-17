@@ -1,8 +1,9 @@
 import os
 
-from modules import shared, ui_extra_networks
-from modules.ui_extra_networks import quote_js
-from modules.hashes import sha256_from_cache
+from components import shared
+from ui import ui_extra_networks
+from ui.ui_extra_networks import quote_js
+from components.hashes import sha256_from_cache
 
 
 class ExtraNetworksPageHypernetworks(ui_extra_networks.ExtraNetworksPage):

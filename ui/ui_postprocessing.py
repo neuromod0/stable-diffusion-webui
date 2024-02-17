@@ -1,6 +1,8 @@
 import gradio as gr
-from modules import scripts, shared, ui_common, postprocessing, call_queue, ui_toprow
-import modules.generation_parameters_copypaste as parameters_copypaste
+from components import scripts, shared, postprocessing 
+from ui import ui_common,ui_toprow
+from utils import call_queue
+import components.generation_parameters_copypaste as parameters_copypaste
 
 
 def create_ui():

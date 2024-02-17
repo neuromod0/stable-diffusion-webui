@@ -1,7 +1,9 @@
 import gradio as gr
 
-from modules import ui_extra_networks_user_metadata, sd_vae, shared
-from modules.ui_common import create_refresh_button
+from ui import ui_extra_networks_user_metadata
+from components import shared
+from components.sd import sd_vae
+from ui.ui_common import create_refresh_button
 
 
 class CheckpointUserMetadataEditor(ui_extra_networks_user_metadata.UserMetadataEditor):

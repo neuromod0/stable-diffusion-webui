@@ -1,6 +1,7 @@
 import gradio as gr
 
-from modules import shared, ui_common, ui_components, styles
+from components import shared, styles
+from ui import ui_components,ui_common
 
 styles_edit_symbol = '\U0001f58c\uFE0F'  # 🖌️
 styles_materialize_symbol = '\U0001f4cb'  # 📋

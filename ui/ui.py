@@ -10,25 +10,27 @@ import gradio as gr
 import gradio.utils
 import numpy as np
 from PIL import Image, PngImagePlugin  # noqa: F401
-from modules.call_queue import wrap_gradio_gpu_call, wrap_queued_call, wrap_gradio_call
+from components.call_queue import wrap_gradio_gpu_call, wrap_queued_call, wrap_gradio_call
 
-from modules import gradio_extensons  # noqa: F401
-from modules import sd_hijack, sd_models, script_callbacks, ui_extensions, deepbooru, extra_networks, ui_common, ui_postprocessing, progress, ui_loadsave, shared_items, ui_settings, timer, sysinfo, ui_checkpoint_merger, scripts, sd_samplers, processing, ui_extra_networks, ui_toprow
-from modules.ui_components import FormRow, FormGroup, ToolButton, FormHTML, InputAccordion, ResizeHandleRow
-from modules.paths import script_path
-from modules.ui_common import create_refresh_button
-from modules.ui_gradio_extensions import reload_javascript
+from components import gradio_extensons, progress, deepbooru, script_callbacks,extra_networks,processing ,scripts,shared_items # noqa: F401
+from components import sd_hijack, sd_models, sd_samplers, , 
+from ui.ui_components import FormRow, FormGroup, ToolButton, FormHTML, InputAccordion, ResizeHandleRow
+from ui import ui_extensions,ui_common, ui_postprocessing,ui_loadsave,ui_settings,ui_extra_networks, ui_toprow,ui_checkpoint_merger
+from components.paths import script_path
+from utils import timer,sysinfo
+from components.ui_common import create_refresh_button
+from components.ui_gradio_extensions import reload_javascript
 
-from modules.shared import opts, cmd_opts
+from components.shared import opts, cmd_opts
 
-import modules.generation_parameters_copypaste as parameters_copypaste
-import modules.hypernetworks.ui as hypernetworks_ui
-import modules.textual_inversion.ui as textual_inversion_ui
-import modules.textual_inversion.textual_inversion as textual_inversion
-import modules.shared as shared
-from modules import prompt_parser
-from modules.sd_hijack import model_hijack
-from modules.generation_parameters_copypaste import image_from_url_text
+import components.generation_parameters_copypaste as parameters_copypaste
+import components.hypernetworks.ui as hypernetworks_ui
+import components.textual_inversion.ui as textual_inversion_ui
+import components.textual_inversion.textual_inversion as textual_inversion
+import components.shared as shared
+from components import prompt_parser
+from components.sd_hijack import model_hijack
+from components.generation_parameters_copypaste import image_from_url_text
 
 create_setting_component = ui_settings.create_setting_component
 

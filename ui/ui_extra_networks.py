@@ -3,15 +3,17 @@ import os.path
 import urllib.parse
 from pathlib import Path
 
-from modules import shared, ui_extra_networks_user_metadata, errors, extra_networks
-from modules.images import read_info_from_image, save_image_with_geninfo
+from components import shared, extra_networks
+from components.images import read_info_from_image, save_image_with_geninfo
+from utils import errors
 import gradio as gr
 import json
 import html
 from fastapi.exceptions import HTTPException
 
-from modules.generation_parameters_copypaste import image_from_url_text
-from modules.ui_components import ToolButton
+from components.generation_parameters_copypaste import image_from_url_text
+from ui.ui_components import ToolButton
+from ui impor ui_extra_networks_user_metadata
 
 extra_pages = []
 allowed_dirs = set()
@@ -321,9 +323,9 @@ def initialize():
 
 
 def register_default_pages():
-    from modules.ui_extra_networks_textual_inversion import ExtraNetworksPageTextualInversion
-    from modules.ui_extra_networks_hypernets import ExtraNetworksPageHypernetworks
-    from modules.ui_extra_networks_checkpoints import ExtraNetworksPageCheckpoints
+    from components.ui_extra_networks_textual_inversion import ExtraNetworksPageTextualInversion
+    from components.ui_extra_networks_hypernets import ExtraNetworksPageHypernetworks
+    from components.ui_extra_networks_checkpoints import ExtraNetworksPageCheckpoints
     register_page(ExtraNetworksPageTextualInversion())
     register_page(ExtraNetworksPageHypernetworks())
     register_page(ExtraNetworksPageCheckpoints())
@@ -362,7 +364,7 @@ def pages_in_preferred_order(pages):
 
 
 def create_ui(interface: gr.Blocks, unrelated_tabs, tabname):
-    from modules.ui import switch_values_symbol
+    from components.ui import switch_values_symbol
 
     ui = ExtraNetworksUi()
     ui.pages = []

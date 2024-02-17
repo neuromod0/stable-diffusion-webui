@@ -1,9 +1,11 @@
 
 import gradio as gr
 
-from modules import sd_models, sd_vae, errors, extras, call_queue
-from modules.ui_components import FormRow
-from modules.ui_common import create_refresh_button
+from components import extras, 
+from utils import call_queue,errors
+from components.ui_components import FormRow
+from components.ui_common import create_refresh_button
+from components.sd import sd_models, sd_vae
 
 
 def update_interp_description(value):

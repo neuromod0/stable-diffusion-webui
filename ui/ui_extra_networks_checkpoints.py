@@ -1,9 +1,11 @@
 import html
 import os
 
-from modules import shared, ui_extra_networks, sd_models
-from modules.ui_extra_networks import quote_js
-from modules.ui_extra_networks_checkpoints_user_metadata import CheckpointUserMetadataEditor
+from components import shared, sd_models
+from components.sd import sd_models
+from ui import ui_extra_networks
+from components.ui_extra_networks import quote_js
+from ui.ui_extra_networks_checkpoints_user_metadata import CheckpointUserMetadataEditor
 
 
 class ExtraNetworksPageCheckpoints(ui_extra_networks.ExtraNetworksPage):
