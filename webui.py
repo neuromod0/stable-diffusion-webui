@@ -46,13 +46,13 @@ def api_only():
 
 
 def webui():
-    from modules.shared_cmd_options import cmd_opts
+    from components.shared_cmd_options import cmd_opts
 
     launch_api = cmd_opts.api
     initialize.initialize()
 
-    from modules import shared, ui_tempdir, script_callbacks, ui, progress, ui_extra_networks
-
+    from modules import shared, script_callbacks, progress
+    from ui import ui_tempdir,ui_extra_networks,ui
     while 1:
         if shared.opts.clean_temp_dir_at_start:
             ui_tempdir.cleanup_tmpdr()
@@ -154,7 +154,7 @@ def webui():
 
 
 if __name__ == "__main__":
-    from modules.shared_cmd_options import cmd_opts
+    from components.shared_cmd_options import cmd_opts
 
     if cmd_opts.nowebui:
         api_only()
