@@ -44,7 +44,7 @@ def check_versions():
     from components.shared_cmd_options import cmd_opts
 
     if not cmd_opts.skip_version_check:
-        from components import errors
+        from utils import errors
         errors.check_versions()
 
 
