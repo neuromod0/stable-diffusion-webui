@@ -2,7 +2,7 @@ import os
 import sys
 from components.paths_internal import models_path, script_path, data_path, extensions_dir, extensions_builtin_dir, cwd  # noqa: F401
 
-import modules.safe  # noqa: F401
+import components.safe  # noqa: F401
 
 
 def mute_sdxl_imports():
