@@ -16,7 +16,7 @@ from components.processing import process_images, Processed, StableDiffusionProc
 from components.shared import opts, state
 import components.shared as shared
 from  components.sd import sd_samplers,sd_models,sd_vae,sd_samplers_kdiffusion
-from util import  errors
+from utils import  errors
 import re
 
 from ui.ui_components import ToolButton

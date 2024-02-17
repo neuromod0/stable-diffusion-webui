@@ -141,11 +141,11 @@ def move_files(src_path: str, dest_path: str, ext_filter: str = None):
 def load_upscalers():
     # We can only do this 'magic' method to dynamically load upscalers if they are referenced,
     # so we'll try to import any _model.py files before looking in __subclasses__
-    modules_dir = os.path.join(shared.script_path, "modules")
+    modules_dir = os.path.join(shared.script_path, "components")
     for file in os.listdir(modules_dir):
         if "_model.py" in file:
             model_name = file.replace("_model.py", "")
-            full_model = f"modules.{model_name}_model"
+            full_model = f"components.{model_name}_model"
             try:
                 importlib.import_module(full_model)
             except Exception:
