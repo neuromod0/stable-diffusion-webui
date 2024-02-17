@@ -22,7 +22,7 @@ codeformer = None
 def setup_model(dirname):
     os.makedirs(model_path, exist_ok=True)
 
-    path = modules.paths.paths.get("CodeFormer", None)
+    path = components.paths.paths.get("CodeFormer", None)
     if path is None:
         return
 
