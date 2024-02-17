@@ -2,7 +2,8 @@ from functools import wraps
 import html
 import time
 
-from components import shared, progress, errors, devices, fifo_lock
+from components import shared, progress
+from utils import errors,devices,fifo_lock
 
 queue_lock = fifo_lock.FIFOLock()
 
