@@ -8,8 +8,8 @@ import os
 import torch
 import torch.nn as nn
 
-from components import devices, paths_internal, shared
-
+from components import paths_internal, shared
+from utils import devices
 sd_vae_taesd_models = {}
 
 

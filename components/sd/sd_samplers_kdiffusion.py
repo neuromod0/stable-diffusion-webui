@@ -1,12 +1,12 @@
 import torch
 import inspect
 import k_diffusion.sampling
-from components import sd_samplers_common, sd_samplers_extra, sd_samplers_cfg_denoiser
+from components.sd import sd_samplers_common, sd_samplers_extra, sd_samplers_cfg_denoiser
 from components.sd_samplers_cfg_denoiser import CFGDenoiser  # noqa: F401
 from components.script_callbacks import ExtraNoiseParams, extra_noise_callback
 
 from components.shared import opts
-import modules.shared as shared
+import components.shared as shared
 
 samplers_k_diffusion = [
     ('DPM++ 2M Karras', 'sample_dpmpp_2m', ['k_dpmpp_2m_ka'], {'scheduler': 'karras'}),

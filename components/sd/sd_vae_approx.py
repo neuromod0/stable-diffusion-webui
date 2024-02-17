@@ -2,7 +2,8 @@ import os
 
 import torch
 from torch import nn
-from components import devices, paths, shared
+from components import paths, shared
+from utils import devices
 
 sd_vae_approx_models = {}
 

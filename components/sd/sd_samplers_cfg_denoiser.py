@@ -1,8 +1,9 @@
 import torch
-from components import prompt_parser, devices, sd_samplers_common
-
+from components import prompt_parser
+from components.sd import sd_samplers_common
+from utils import devices
 from components.shared import opts, state
-import modules.shared as shared
+import components.shared as shared
 from components.script_callbacks import CFGDenoiserParams, cfg_denoiser_callback
 from components.script_callbacks import CFGDenoisedParams, cfg_denoised_callback
 from components.script_callbacks import AfterCFGCallbackParams, cfg_after_cfg_callback

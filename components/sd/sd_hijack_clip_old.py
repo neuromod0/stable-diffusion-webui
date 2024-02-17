@@ -1,4 +1,4 @@
-from components import sd_hijack_clip
+from components.sd import sd_hijack_clip
 from components import shared
 
 
