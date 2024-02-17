@@ -35,7 +35,8 @@ def imports():
     shared_init.initialize()
     startup_timer.record("initialize shared")
 
-    from components import processing, gradio_extensons, ui  # noqa: F401
+    from components import processing, gradio_extensons # noqa: F401
+    from ui import ui
     startup_timer.record("other imports")
 
 
