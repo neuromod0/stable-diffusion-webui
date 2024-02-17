@@ -9,7 +9,8 @@ from torch import einsum
 from ldm.util import default
 from einops import rearrange
 
-from components import shared, errors, devices, sub_quadratic_attention
+from components import shared, sub_quadratic_attention
+from utils import errors, devices
 from components.hypernetworks import hypernetwork
 
 import ldm.modules.attention
