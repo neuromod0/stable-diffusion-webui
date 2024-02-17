@@ -13,7 +13,7 @@ from components.shared import opts, state
 from components.sd.sd_models import get_closet_checkpoint_match
 import components.shared as shared
 import components.processing as processing
-from ui import plaintext_to_html
+from ui.ui import plaintext_to_html
 import components.scripts
 
 
