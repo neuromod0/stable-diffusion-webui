@@ -1,10 +1,10 @@
 import html
 import os
 
-from components import shared, sd_models
+from components import shared
 from components.sd import sd_models
 from ui import ui_extra_networks
-from components.ui_extra_networks import quote_js
+from ui.ui_extra_networks import quote_js
 from ui.ui_extra_networks_checkpoints_user_metadata import CheckpointUserMetadataEditor
 
 

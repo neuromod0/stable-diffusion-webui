@@ -10,7 +10,7 @@ import subprocess as sp
 from components import  shared,images
 from utils import call_queue
 from components.generation_parameters_copypaste import image_from_url_text
-from components.ui_components import ToolButton
+from ui.ui_components import ToolButton
 import components.generation_parameters_copypaste as parameters_copypaste
 
 folder_symbol = '\U0001f4c2'  # 📂

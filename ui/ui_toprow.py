@@ -2,7 +2,7 @@ import gradio as gr
 
 from components import shared
 import components.images
-from ui impor tui_prompt_styles
+from ui import ui_prompt_styles
 
 from ui.ui_components import ToolButton
 
