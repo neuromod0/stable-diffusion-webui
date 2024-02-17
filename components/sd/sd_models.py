@@ -600,7 +600,7 @@ def send_model_to_trash(m):
 
 
 def load_model(checkpoint_info=None, already_loaded_state_dict=None):
-    from components import sd_hijack
+    from components.sd import sd_hijack
     checkpoint_info = checkpoint_info or select_checkpoint()
 
     timer = Timer()
