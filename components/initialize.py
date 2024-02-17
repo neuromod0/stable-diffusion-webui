@@ -21,7 +21,8 @@ def imports():
     import gradio  # noqa: F401
     startup_timer.record("import gradio")
 
-    from utils import paths, timer, import_hook, errors  # noqa: F401
+    from utils import  timer, errors  # noqa: F401
+    from components import paths, import_hook
     startup_timer.record("setup paths")
 
     import ldm.modules.encoders.modules  # noqa: F401
