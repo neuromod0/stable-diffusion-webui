@@ -15,19 +15,20 @@ import cv2
 from skimage import exposure
 from typing import Any
 
-import modules.sd_hijack
-from components import devices, prompt_parser, masking, sd_samplers, lowvram, generation_parameters_copypaste, extra_networks, sd_vae_approx, scripts, sd_samplers_common, sd_unet, errors, rng
+from components.sd import sd_hijack, sd_samplers, sd_vae_approx, sd_samplers_common, sd_unet
+from components import  prompt_parser, masking, generation_parameters_copypaste, extra_networks, scripts, rng
+from utils import devices, lowvram, errors
 from components.rng import slerp # noqa: F401
-from components.sd_hijack import model_hijack
-from components.sd_samplers_common import images_tensor_to_samples, decode_first_stage, approximation_indexes
+from components.sd.sd_hijack import model_hijack
+from components.sd.sd_samplers_common import images_tensor_to_samples, decode_first_stage, approximation_indexes
 from components.shared import opts, cmd_opts, state
-import modules.shared as shared
-import modules.paths as paths
-import modules.face_restoration
-import modules.images as images
-import modules.styles
-import modules.sd_models as sd_models
-import modules.sd_vae as sd_vae
+import components.shared as shared
+import components.paths as paths
+import components.face_restoration
+import components.images as images
+import components.styles
+import components.sd.sd_models as sd_models
+import components.sd.sd_vae as sd_vae
 from ldm.data.util import AddMiDaS
 from ldm.models.diffusion.ddpm import LatentDepth2ImageDiffusion
 
