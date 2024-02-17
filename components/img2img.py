@@ -10,7 +10,7 @@ from components import images as imgutil
 from components.generation_parameters_copypaste import create_override_settings_dict, parse_generation_parameters
 from components.processing import Processed, StableDiffusionProcessingImg2Img, process_images
 from components.shared import opts, state
-from components..sdsd_models import get_closet_checkpoint_match
+from components.sd.sd_models import get_closet_checkpoint_match
 import components.shared as shared
 import components.processing as processing
 from components.ui import plaintext_to_html
