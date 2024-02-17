@@ -13,7 +13,7 @@ from PIL import Image, PngImagePlugin  # noqa: F401
 from components.call_queue import wrap_gradio_gpu_call, wrap_queued_call, wrap_gradio_call
 
 from components import gradio_extensons, progress, deepbooru, script_callbacks,extra_networks,processing ,scripts,shared_items # noqa: F401
-from components import sd_hijack, sd_models, sd_samplers, , 
+from components.sd import sd_hijack, sd_models, sd_samplers
 from ui.ui_components import FormRow, FormGroup, ToolButton, FormHTML, InputAccordion, ResizeHandleRow
 from ui import ui_extensions,ui_common, ui_postprocessing,ui_loadsave,ui_settings,ui_extra_networks, ui_toprow,ui_checkpoint_merger
 from components.paths import script_path
