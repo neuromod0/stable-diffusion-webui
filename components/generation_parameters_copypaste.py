@@ -7,7 +7,8 @@ import re
 
 import gradio as gr
 from components.paths import data_path
-from components import shared, ui_tempdir, script_callbacks, processing
+from components import shared, script_callbacks, processing
+from ui import ui_tempdir
 from PIL import Image
 
 re_param_code = r'\s*(\w[\w \-/]+):\s*("(?:\\.|[^\\"])+"|[^,]*)(?:,|$)'
