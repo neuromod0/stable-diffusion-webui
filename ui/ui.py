@@ -18,8 +18,8 @@ from ui.ui_components import FormRow, FormGroup, ToolButton, FormHTML, InputAcco
 from ui import ui_extensions,ui_common, ui_postprocessing,ui_loadsave,ui_settings,ui_extra_networks, ui_toprow,ui_checkpoint_merger
 from components.paths import script_path
 from utils import timer,sysinfo
-from components.ui_common import create_refresh_button
-from components.ui_gradio_extensions import reload_javascript
+from ui.ui_common import create_refresh_button
+from ui.ui_gradio_extensions import reload_javascript
 
 from components.shared import opts, cmd_opts
 
