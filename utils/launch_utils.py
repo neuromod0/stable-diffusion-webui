@@ -11,7 +11,7 @@ import platform
 import json
 from functools import lru_cache
 
-from modules import cmd_args, errors
+from utils import cmd_args, errors
 from modules.paths_internal import script_path, extensions_dir
 from modules.timer import startup_timer
 from modules import logging_config
