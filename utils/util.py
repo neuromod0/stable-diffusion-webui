@@ -1,8 +1,8 @@
 import os
 import re
 
-from modules import shared
-from modules.paths_internal import script_path
+from components import shared
+from components.paths_internal import script_path
 
 
 def natural_sort_key(s, regex=re.compile('([0-9]+)')):

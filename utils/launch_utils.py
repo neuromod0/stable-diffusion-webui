@@ -12,9 +12,9 @@ import json
 from functools import lru_cache
 
 from utils import cmd_args, errors
-from modules.paths_internal import script_path, extensions_dir
-from modules.timer import startup_timer
-from modules import logging_config
+from components.paths_internal import script_path, extensions_dir
+from components.timer import startup_timer
+from components import logging_config
 
 args, _ = cmd_args.parser.parse_known_args()
 logging_config.setup_logging(args.loglevel)
@@ -465,7 +465,7 @@ def start():
 
 
 def dump_sysinfo():
-    from modules import sysinfo
+    from components import sysinfo
     import datetime
 
     text = sysinfo.get()

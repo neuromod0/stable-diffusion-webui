@@ -1,5 +1,5 @@
-from modules import shared
-from modules.sd_hijack_utils import CondFunc
+from components import shared
+from components.sd_hijack_utils import CondFunc
 
 has_ipex = False
 try:
