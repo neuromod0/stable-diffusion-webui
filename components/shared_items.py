@@ -15,48 +15,48 @@ def postprocessing_scripts():
 
 
 def sd_vae_items():
-    import components.sd_vae
+    import components.sd.sd_vae
 
-    return ["Automatic", "None"] + list(components.sd_vae.vae_dict)
+    return ["Automatic", "None"] + list(components.sd.sd_vae.vae_dict)
 
 
 def refresh_vae_list():
-    import components.sd_vae
+    import components.sd.sd_vae
 
-    components.sd_vae.refresh_vae_list()
+    components.sd.sd_vae.refresh_vae_list()
 
 
 def cross_attention_optimizations():
-    import components.sd_hijack
+    import components.sd.sd_hijack
 
-    return ["Automatic"] + [x.title() for x in components.sd_hijack.optimizers] + ["None"]
+    return ["Automatic"] + [x.title() for x in components.sd.sd_hijack.optimizers] + ["None"]
 
 
 def sd_unet_items():
-    import components.sd_unet
+    import components.sd.sd_unet
 
-    return ["Automatic"] + [x.label for x in components.sd_unet.unet_options] + ["None"]
+    return ["Automatic"] + [x.label for x in components.sd.sd_unet.unet_options] + ["None"]
 
 
 def refresh_unet_list():
-    import components.sd_unet
+    import components.sd.sd_unet
 
-    components.sd_unet.list_unets()
+    components.sd.sd_unet.list_unets()
 
 
 def list_checkpoint_tiles(use_short=False):
-    import components.sd_models
-    return components.sd_models.checkpoint_tiles(use_short)
+    import components.sd.sd_models
+    return components.sd.sd_models.checkpoint_tiles(use_short)
 
 
 def refresh_checkpoints():
-    import components.sd_models
-    return components.sd_models.list_models()
+    import components.sd.sd_models
+    return components.sd.sd_models.list_models()
 
 
 def list_samplers():
-    import components.sd_samplers
-    return components.sd_samplers.all_samplers
+    import components.sd.sd_samplers
+    return components.sd.sd_samplers.all_samplers
 
 
 def reload_hypernetworks():
@@ -123,15 +123,15 @@ class Shared(sys.modules[__name__].__class__):
 
     @property
     def sd_model(self):
-        import components.sd_models
+        import components.sd.sd_models
 
-        return components.sd_models.model_data.get_sd_model()
+        return components.sd.sd_models.model_data.get_sd_model()
 
     @sd_model.setter
     def sd_model(self, value):
-        import components.sd_models
+        import components.sd.sd_models
 
-        components.sd_models.model_data.set_sd_model(value)
+        components.sd.sd_models.model_data.set_sd_model(value)
 
 
 sys.modules['components.shared'].__class__ = Shared
