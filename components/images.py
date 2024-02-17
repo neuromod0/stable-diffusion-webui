@@ -17,7 +17,7 @@ import string
 import json
 import hashlib
 
-from components import sd_samplers, shared, script_callbacks
+from components import shared, script_callbacks
 from components.sd import sd_samplers
 from components.paths_internal import roboto_ttf_file
 from components.shared import opts
