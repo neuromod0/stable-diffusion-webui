@@ -113,7 +113,7 @@ def ui_reorder_categories():
     yield "scripts"
 
 
-class Shared(sys.component[__name__].__class__):
+class Shared(sys.module[__name__].__class__):
     """
     this class is here to provide sd_model field as a property, so that it can be created and loaded on demand rather than
     at program startup.
@@ -134,4 +134,4 @@ class Shared(sys.component[__name__].__class__):
         component.sd_models.model_data.set_sd_model(value)
 
 
-sys.component['modules.shared'].__class__ = Shared
+sys.module['modules.shared'].__class__ = Shared
