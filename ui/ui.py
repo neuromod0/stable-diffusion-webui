@@ -10,7 +10,7 @@ import gradio as gr
 import gradio.utils
 import numpy as np
 from PIL import Image, PngImagePlugin  # noqa: F401
-from components.call_queue import wrap_gradio_gpu_call, wrap_queued_call, wrap_gradio_call
+from utils.call_queue import wrap_gradio_gpu_call, wrap_queued_call, wrap_gradio_call
 
 from components import gradio_extensons, progress, deepbooru, script_callbacks,extra_networks,processing ,scripts,shared_items # noqa: F401
 from components.sd import sd_hijack, sd_models, sd_samplers
