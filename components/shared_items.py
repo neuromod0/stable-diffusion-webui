@@ -4,59 +4,59 @@ from components.shared_cmd_options import cmd_opts
 
 
 def realesrgan_models_names():
-    import component.realesrgan_model
-    return [x.name for x in component.realesrgan_model.get_realesrgan_models(None)]
+    import components.realesrgan_model
+    return [x.name for x in components.realesrgan_model.get_realesrgan_models(None)]
 
 
 def postprocessing_scripts():
-    import component.scripts
+    import components.scripts
 
-    return component.scripts.scripts_postproc.scripts
+    return components.scripts.scripts_postproc.scripts
 
 
 def sd_vae_items():
-    import component.sd_vae
+    import components.sd_vae
 
-    return ["Automatic", "None"] + list(component.sd_vae.vae_dict)
+    return ["Automatic", "None"] + list(components.sd_vae.vae_dict)
 
 
 def refresh_vae_list():
-    import component.sd_vae
+    import components.sd_vae
 
-    component.sd_vae.refresh_vae_list()
+    components.sd_vae.refresh_vae_list()
 
 
 def cross_attention_optimizations():
-    import component.sd_hijack
+    import components.sd_hijack
 
-    return ["Automatic"] + [x.title() for x in component.sd_hijack.optimizers] + ["None"]
+    return ["Automatic"] + [x.title() for x in components.sd_hijack.optimizers] + ["None"]
 
 
 def sd_unet_items():
-    import component.sd_unet
+    import components.sd_unet
 
-    return ["Automatic"] + [x.label for x in component.sd_unet.unet_options] + ["None"]
+    return ["Automatic"] + [x.label for x in components.sd_unet.unet_options] + ["None"]
 
 
 def refresh_unet_list():
-    import component.sd_unet
+    import components.sd_unet
 
-    component.sd_unet.list_unets()
+    components.sd_unet.list_unets()
 
 
 def list_checkpoint_tiles(use_short=False):
-    import component.sd_models
-    return component.sd_models.checkpoint_tiles(use_short)
+    import components.sd_models
+    return components.sd_models.checkpoint_tiles(use_short)
 
 
 def refresh_checkpoints():
-    import component.sd_models
-    return component.sd_models.list_models()
+    import components.sd_models
+    return components.sd_models.list_models()
 
 
 def list_samplers():
-    import component.sd_samplers
-    return component.sd_samplers.all_samplers
+    import components.sd_samplers
+    return components.sd_samplers.all_samplers
 
 
 def reload_hypernetworks():
@@ -123,15 +123,15 @@ class Shared(sys.modules[__name__].__class__):
 
     @property
     def sd_model(self):
-        import component.sd_models
+        import components.sd_models
 
-        return component.sd_models.model_data.get_sd_model()
+        return components.sd_models.model_data.get_sd_model()
 
     @sd_model.setter
     def sd_model(self, value):
-        import component.sd_models
+        import components.sd_models
 
-        component.sd_models.model_data.set_sd_model(value)
+        components.sd_models.model_data.set_sd_model(value)
 
 
-sys.modules['modules.shared'].__class__ = Shared
+sys.modules['components.shared'].__class__ = Shared
