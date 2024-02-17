@@ -5,7 +5,8 @@ import torch
 import sgm.models.diffusion
 import sgm.modules.diffusionmodules.denoiser_scaling
 import sgm.modules.diffusionmodules.discretizer
-from components import devices, shared, prompt_parser
+from components import shared, prompt_parser
+from utils import devices
 
 
 def get_learned_conditioning(self: sgm.models.diffusion.DiffusionEngine, batch: prompt_parser.SdConditioning | list[str]):
