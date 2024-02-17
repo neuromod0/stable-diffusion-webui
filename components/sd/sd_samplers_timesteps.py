@@ -6,7 +6,7 @@ from components.sd.sd_samplers_cfg_denoiser import CFGDenoiser
 from components.script_callbacks import ExtraNoiseParams, extra_noise_callback
 from utils import devices
 from components.shared import opts
-import modules.shared as shared
+import components.shared as shared
 
 samplers_timesteps = [
     ('DDIM', sd_samplers_timesteps_impl.ddim, ['ddim'], {}),
