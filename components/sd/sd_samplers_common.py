@@ -3,8 +3,10 @@ from collections import namedtuple
 import numpy as np
 import torch
 from PIL import Image
-from components import devices, images, sd_vae_approx, sd_samplers, sd_vae_taesd, shared, sd_models
+from components import  images
+from components.sd import sd_vae_approx, sd_samplers, sd_vae_taesd, shared, sd_models
 from components.shared import opts, state
+from utils import devices
 import k_diffusion.sampling
 
 
