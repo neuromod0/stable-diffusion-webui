@@ -2,8 +2,9 @@ import html
 
 import gradio as gr
 
-import modules.textual_inversion.textual_inversion
-from modules import sd_hijack, shared
+import components.textual_inversion.textual_inversion
+from components.sd import sd_hijack
+from components import shared
 
 
 def create_embedding(name, initialization_text, nvpt, overwrite_old):
