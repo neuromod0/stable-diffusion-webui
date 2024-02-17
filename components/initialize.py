@@ -4,7 +4,7 @@ import sys
 import warnings
 from threading import Thread
 
-from components.timer import startup_timer
+from utils.timer import startup_timer
 
 
 def imports():
