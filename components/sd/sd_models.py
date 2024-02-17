@@ -13,7 +13,9 @@ import ldm.modules.midas as midas
 
 from ldm.util import instantiate_from_config
 
-from components import paths, shared, modelloader, devices, script_callbacks, sd_vae, sd_disable_initialization, errors, hashes, sd_models_config, sd_unet, sd_models_xl, cache, extra_networks, processing, lowvram, sd_hijack, patches
+from components import paths, shared, modelloader, script_callbacks, hashes, extra_networks, processing, patches
+from utils import devices, errors, cache, lowvram
+from components.sd import sd_vae, sd_disable_initialization, sd_models_config,sd_unet, sd_models_xl, sd_hijack
 from components.timer import Timer
 import tomesd
 import numpy as np

@@ -2,10 +2,10 @@ import hashlib
 import os.path
 
 from components import shared
-import modules.cache
+import utils.cache
 
-dump_cache = modules.cache.dump_cache
-cache = modules.cache.cache
+dump_cache = utils.cache.dump_cache
+cache = utils.cache.cache
 
 
 def calculate_sha256(filename):
