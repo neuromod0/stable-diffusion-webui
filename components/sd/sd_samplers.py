@@ -1,7 +1,8 @@
-from components import sd_samplers_kdiffusion, sd_samplers_timesteps, shared
+from components import shared
 
 # imports for functions that previously were here and are used by other modules
 from components.sd.sd_samplers_common import samples_to_image_grid, sample_to_image  # noqa: F401
+from components.sd import sd_samplers_kdiffusion, sd_samplers_timesteps
 
 all_samplers = [
     *sd_samplers_kdiffusion.samplers_data_k_diffusion,
