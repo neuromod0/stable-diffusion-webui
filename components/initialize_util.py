@@ -4,7 +4,7 @@ import signal
 import sys
 import re
 
-from components.timer import startup_timer
+from utils.timer import startup_timer
 
 
 def gradio_server_name():
