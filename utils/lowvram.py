@@ -1,5 +1,6 @@
 import torch
-from components import devices, shared
+from utils import devices
+from components import shared
 
 module_in_gpu = None
 cpu = torch.device("cpu")
