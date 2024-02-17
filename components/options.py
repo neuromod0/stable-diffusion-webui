@@ -4,7 +4,7 @@ from dataclasses import dataclass
 
 import gradio as gr
 
-from components import errors
+from utils import errors
 from components.shared_cmd_options import cmd_opts
 
 
