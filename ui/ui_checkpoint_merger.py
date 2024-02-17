@@ -3,8 +3,8 @@ import gradio as gr
 
 from components import extras
 from utils import call_queue,errors
-from components.ui_components import FormRow
-from components.ui_common import create_refresh_button
+from ui.ui_components import FormRow
+from ui.ui_common import create_refresh_button
 from components.sd import sd_models, sd_vae
 
 
