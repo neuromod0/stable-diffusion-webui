@@ -3,7 +3,9 @@ from collections import namedtuple
 
 import torch
 
-from components import prompt_parser, devices, sd_hijack
+from components import prompt_parser
+from components.sd import sd_hijack
+from utils import devices
 from components.shared import opts
 
 

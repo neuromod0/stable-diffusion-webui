@@ -1,6 +1,7 @@
 import torch
 
-from components import sd_hijack_clip, devices
+from components.sd import sd_hijack_clip
+from utils import devices
 
 
 class FrozenXLMREmbedderWithCustomWords(sd_hijack_clip.FrozenCLIPEmbedderWithCustomWords):
