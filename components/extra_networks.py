@@ -4,7 +4,7 @@ import re
 import logging
 from collections import defaultdict
 
-from components import errors
+from utils import errors
 
 extra_network_registry = {}
 extra_network_aliases = {}
