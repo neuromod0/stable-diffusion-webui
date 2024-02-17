@@ -1,7 +1,8 @@
 from PIL import Image
 import numpy as np
 
-from modules import scripts_postprocessing, gfpgan_model, ui_components
+from components import scripts_postprocessing, gfpgan_model
+from ui import ui_components
 import gradio as gr
 
 

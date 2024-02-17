@@ -1,4 +1,5 @@
-from modules import scripts_postprocessing, ui_components, deepbooru, shared
+from components import scripts_postprocessing, deepbooru, shared
+from ui import ui_components
 import gradio as gr
 
 

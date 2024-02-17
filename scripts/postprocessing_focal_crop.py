@@ -1,8 +1,10 @@
 
-from modules import scripts_postprocessing, ui_components, errors
+from components import scripts_postprocessing
+from ui import ui_components
+from utils import errors
 import gradio as gr
 
-from modules.textual_inversion import autocrop
+from components.textual_inversion import autocrop
 
 
 class ScriptPostprocessingFocalCrop(scripts_postprocessing.ScriptPostprocessing):

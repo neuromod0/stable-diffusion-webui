@@ -3,10 +3,11 @@ from collections import namedtuple
 import numpy as np
 from tqdm import trange
 
-import modules.scripts as scripts
+import components.scripts as scripts
 import gradio as gr
 
-from modules import processing, shared, sd_samplers, sd_samplers_common
+from components import processing, shared
+from components.sd import sd_samplers, sd_samplers_common
 
 import torch
 import k_diffusion as K

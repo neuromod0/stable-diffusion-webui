@@ -1,6 +1,7 @@
 from PIL import ImageOps, Image
 
-from modules import scripts_postprocessing, ui_components
+from components import scripts_postprocessing
+from ui import ui_components
 import gradio as gr
 
 

@@ -1,12 +1,13 @@
 import math
 
-import modules.scripts as scripts
+import components.scripts as scripts
 import gradio as gr
 from PIL import Image
 
-from modules import processing, shared, images, devices
-from modules.processing import Processed
-from modules.shared import opts, state
+from components import processing, shared, images
+from utils import devices
+from components.processing import Processed
+from components.shared import opts, state
 
 
 class Script(scripts.Script):

@@ -2,12 +2,13 @@ import copy
 import random
 import shlex
 
-import modules.scripts as scripts
+import components.scripts as scripts
 import gradio as gr
 
-from modules import sd_samplers, errors, sd_models
-from modules.processing import Processed, process_images
-from modules.shared import state
+from components.sd import sd_samplers, sd_models
+from components.processing import Processed, process_images
+from components.shared import state
+from utils import errors
 
 
 def process_model_tag(tag):

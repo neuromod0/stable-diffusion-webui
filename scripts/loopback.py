@@ -1,10 +1,10 @@
 import math
 
 import gradio as gr
-import modules.scripts as scripts
-from modules import deepbooru, images, processing, shared
-from modules.processing import Processed
-from modules.shared import opts, state
+import components.scripts as scripts
+from components import deepbooru, images, processing, shared
+from components.processing import Processed
+from components.shared import opts, state
 
 
 class Script(scripts.Script):

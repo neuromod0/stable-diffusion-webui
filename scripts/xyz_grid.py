@@ -8,19 +8,18 @@ from io import StringIO
 from PIL import Image
 import numpy as np
 
-import modules.scripts as scripts
+import components.scripts as scripts
 import gradio as gr
 
-from modules import images, sd_samplers, processing, sd_models, sd_vae, sd_samplers_kdiffusion, errors
-from modules.processing import process_images, Processed, StableDiffusionProcessingTxt2Img
-from modules.shared import opts, state
-import modules.shared as shared
-import modules.sd_samplers
-import modules.sd_models
-import modules.sd_vae
+from components import images, processing
+from components.processing import process_images, Processed, StableDiffusionProcessingTxt2Img
+from components.shared import opts, state
+import components.shared as shared
+from  components.sd import sd_samplers,sd_models,sd_vae,sd_samplers_kdiffusion
+from util import  errors
 import re
 
-from modules.ui_components import ToolButton
+from ui.ui_components import ToolButton
 
 fill_values_symbol = "\U0001f4d2"  # 📒
 

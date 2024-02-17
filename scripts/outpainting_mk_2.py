@@ -3,13 +3,13 @@ import math
 import numpy as np
 import skimage
 
-import modules.scripts as scripts
+import components.scripts as scripts
 import gradio as gr
 from PIL import Image, ImageDraw
 
-from modules import images
-from modules.processing import Processed, process_images
-from modules.shared import opts, state
+from components import images
+from components.processing import Processed, process_images
+from components.shared import opts, state
 
 
 # this function is taken from https://github.com/parlance-zz/g-diffuser-bot

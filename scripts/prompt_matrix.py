@@ -1,12 +1,12 @@
 import math
 
-import modules.scripts as scripts
+import components.scripts as scripts
 import gradio as gr
 
-from modules import images
-from modules.processing import process_images
-from modules.shared import opts, state
-import modules.sd_samplers
+from components import images
+from components.processing import process_images
+from components.shared import opts, state
+import components.sd.sd_samplers
 
 
 def draw_xy_grid(xs, ys, x_label, y_label, cell):
