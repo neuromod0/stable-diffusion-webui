@@ -5,7 +5,7 @@ import os
 import inspect
 from contextlib import closing
 
-import modules.textual_inversion.dataset
+import components.textual_inversion.dataset
 import torch
 import tqdm
 from einops import rearrange, repeat
