@@ -2,12 +2,11 @@ import torch
 from torch.nn.functional import silu
 from types import MethodType
 
-from components import shared, script_callbacks, patches
-from components.sd import sd_hijack_optimizations, sd_unet
+from components import shared, script_callbacks, patches,xlmr,xlmr_m18
+from components.sd import sd_hijack_optimizations, sd_unet,sd_hijack_clip,sd_hijack_open_clip,sd_hijack_unet,sd_hijack_xlmr
 from utils import devices, errors
 from components.hypernetworks import hypernetwork
 from components.shared import cmd_opts
-from components import sd_hijack_clip, sd_hijack_open_clip, sd_hijack_unet, sd_hijack_xlmr, xlmr, xlmr_m18
 
 import ldm.modules.attention
 import ldm.modules.diffusionmodules.model
