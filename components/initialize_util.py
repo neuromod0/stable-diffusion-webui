@@ -168,8 +168,10 @@ def configure_sigint_handler():
 
 
 def configure_opts_onchange():
-    from components import shared, sd_models, sd_vae, ui_tempdir, sd_hijack
-    from components.call_queue import wrap_queued_call
+    from components import shared
+    from components.sd import sd_hijack,sd_models, sd_vae
+    from ui import ui_tempdir
+    from utils.call_queue import wrap_queued_call
 
     shared.opts.onchange("sd_model_checkpoint", wrap_queued_call(lambda: sd_models.reload_model_weights()), call=False)
     shared.opts.onchange("sd_vae", wrap_queued_call(lambda: sd_vae.reload_vae_weights()), call=False)

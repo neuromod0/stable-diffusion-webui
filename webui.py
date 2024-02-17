@@ -16,8 +16,8 @@ initialize.check_versions()
 
 
 def create_api(app):
-    from modules.api.api import Api
-    from modules.call_queue import queue_lock
+    from components.api.api import Api
+    from utils.call_queue import queue_lock
 
     api = Api(app, queue_lock)
     return api
@@ -25,7 +25,7 @@ def create_api(app):
 
 def api_only():
     from fastapi import FastAPI
-    from modules.shared_cmd_options import cmd_opts
+    from components.shared_cmd_options import cmd_opts
 
     initialize.initialize()
 
@@ -33,7 +33,7 @@ def api_only():
     initialize_util.setup_middleware(app)
     api = create_api(app)
 
-    from modules import script_callbacks
+    from components import script_callbacks
     script_callbacks.before_ui_callback()
     script_callbacks.app_started_callback(None, app)
 
@@ -51,7 +51,7 @@ def webui():
     launch_api = cmd_opts.api
     initialize.initialize()
 
-    from modules import shared, script_callbacks, progress
+    from components import shared, script_callbacks, progress
     from ui import ui_tempdir,ui_extra_networks,ui
     while 1:
         if shared.opts.clean_temp_dir_at_start:
