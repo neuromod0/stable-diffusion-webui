@@ -1,7 +1,7 @@
 import os
 import gradio as gr
 
-from components import localization, shared, scripts
+from components import shared, scripts
 from components.paths import script_path, data_path, cwd
 
 
