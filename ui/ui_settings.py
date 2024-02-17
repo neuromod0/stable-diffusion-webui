@@ -4,7 +4,7 @@ from components import  shared, script_callbacks, scripts
 from components.sd import sd_models
 from ui import ui_common
 from utils import sysinfo,timer
-from components.call_queue import wrap_gradio_call
+from utils.call_queue import wrap_gradio_call
 from components.shared import opts
 from ui.ui_components import FormRow
 from ui.ui_gradio_extensions import reload_javascript
