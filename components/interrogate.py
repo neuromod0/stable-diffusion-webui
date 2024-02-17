@@ -10,7 +10,8 @@ import torch.hub
 from torchvision import transforms
 from torchvision.transforms.functional import InterpolationMode
 
-from components import devices, paths, shared, lowvram, modelloader, errors
+from components import  paths, shared, modelloader
+from utils import devices, errors, lowvram
 
 blip_image_eval_size = 384
 clip_model_name = 'ViT-L/14'
