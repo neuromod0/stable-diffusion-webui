@@ -254,8 +254,8 @@ def create_override_settings_dropdown(tabname, row):
 
 
 def create_ui():
-    import modules.img2img
-    import modules.txt2img
+    import components.img2img
+    import components.txt2img
 
     reload_javascript()
 

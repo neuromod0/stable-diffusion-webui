@@ -142,7 +142,7 @@ def initialize_rest(*, reload_script_modules=False):
         by that time, so we apply optimization again.
         """
 
-        shared.sd.sd_model  # noqa: B018
+        shared.sd_model  # noqa: B018
 
         if sd_hijack.current_optimizer is None:
             sd_hijack.apply_optimizations()
