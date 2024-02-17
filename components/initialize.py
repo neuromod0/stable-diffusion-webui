@@ -59,7 +59,7 @@ def initialize():
     from components import modelloader
     modelloader.cleanup_models()
 
-    from components import sd_models
+    from components.sd import sd_models
     sd_models.setup_model()
     startup_timer.record("setup SD model")
 
@@ -83,7 +83,7 @@ def initialize_rest(*, reload_script_modules=False):
     """
     from components.shared_cmd_options import cmd_opts
 
-    from components import sd_samplers
+    from components.sd import sd_samplers
     sd_samplers.set_samplers()
     startup_timer.record("set samplers")
 
@@ -101,7 +101,7 @@ def initialize_rest(*, reload_script_modules=False):
         scripts.load_scripts()
         return
 
-    from components import sd_models
+    from components.sd import sd_models
     sd_models.list_models()
 
     with startup_timer.subcategory("load scripts"):
@@ -116,20 +116,21 @@ def initialize_rest(*, reload_script_modules=False):
     modelloader.load_upscalers()
     startup_timer.record("load upscalers")
 
-    from components import sd_vae
+    from components.sd import sd_vae
     sd_vae.refresh_vae_list()
     startup_timer.record("refresh VAE")
 
-    from components import textual_inversion
+    from components.textual_inversion import textual_inversion
     textual_inversion.textual_inversion.list_textual_inversion_templates()
     startup_timer.record("refresh textual inversion templates")
 
-    from components import script_callbacks, sd_hijack_optimizations, sd_hijack
+    from components import script_callbacks
+    from components.sd import sd_hijack_optimizations, sd_hijack
     script_callbacks.on_list_optimizers(sd_hijack_optimizations.list_optimizers)
     sd_hijack.list_optimizers()
     startup_timer.record("scripts list_optimizers")
 
-    from components import sd_unet
+    from components.sd import sd_unet
     sd_unet.list_unets()
     startup_timer.record("scripts list_unets")
 
@@ -146,7 +147,7 @@ def initialize_rest(*, reload_script_modules=False):
         if sd_hijack.current_optimizer is None:
             sd_hijack.apply_optimizations()
 
-        from components import devices
+        from utils import devices
         devices.first_time_calculation()
     if not shared.cmd_opts.skip_load_model_at_start:
         Thread(target=load_model).start()
@@ -155,7 +156,7 @@ def initialize_rest(*, reload_script_modules=False):
     shared_items.reload_hypernetworks()
     startup_timer.record("reload hypernetworks")
 
-    from components import ui_extra_networks
+    from ui import ui_extra_networks
     ui_extra_networks.initialize()
     ui_extra_networks.register_default_pages()
 
