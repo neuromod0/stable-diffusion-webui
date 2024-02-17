@@ -3,13 +3,14 @@ import contextlib
 from functools import lru_cache
 
 import torch
-from components import errors, shared
+from utils import errors
+from componenets import shared
 
 if sys.platform == "darwin":
-    from components import mac_specific
+    from utils import mac_specific
 
 if shared.cmd_opts.use_ipex:
-    from components import xpu_specific
+    from utils import xpu_specific
 
 
 def has_xpu() -> bool:
