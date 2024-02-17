@@ -9,7 +9,8 @@ import tqdm
 from datetime import datetime
 import git
 
-from components import shared, extensions, errors
+from components import shared, extensions
+from utils import errors
 from components.paths_internal import script_path, config_states_dir
 
 all_config_states = {}

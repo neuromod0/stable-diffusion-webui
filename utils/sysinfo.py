@@ -9,7 +9,8 @@ import psutil
 import re
 
 import launch
-from components import paths_internal, timer, shared, extensions, errors
+from utils import errors, timer
+from components import paths_internal, shared, extensions
 
 checksum_token = "DontStealMyGamePlz__WINNERS_DONT_USE_DRUGS__DONT_COPY_THAT_FLOPPY"
 environment_whitelist = {

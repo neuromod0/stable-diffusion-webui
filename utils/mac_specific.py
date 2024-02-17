@@ -3,7 +3,7 @@ import logging
 import torch
 from torch import Tensor
 import platform
-from components.sd_hijack_utils import CondFunc
+from components.sd.sd_hijack_utils import CondFunc
 from packaging import version
 from components import shared
 
