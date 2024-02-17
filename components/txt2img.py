@@ -4,8 +4,8 @@ import components.scripts
 from components import processing
 from components.generation_parameters_copypaste import create_override_settings_dict
 from components.shared import opts
-import modules.shared as shared
-from components.ui import plaintext_to_html
+import components.shared as shared
+from ui.ui import plaintext_to_html
 import gradio as gr
 
 
