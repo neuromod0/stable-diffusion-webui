@@ -1,4 +1,4 @@
-from modules import launch_utils
+from utils import launch_utils
 
 args = launch_utils.args
 python = launch_utils.python
