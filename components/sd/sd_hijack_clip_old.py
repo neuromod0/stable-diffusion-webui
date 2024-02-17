@@ -1,5 +1,5 @@
-from modules import sd_hijack_clip
-from modules import shared
+from components import sd_hijack_clip
+from components import shared
 
 
 def process_text_old(self: sd_hijack_clip.FrozenCLIPEmbedderWithCustomWordsBase, texts):

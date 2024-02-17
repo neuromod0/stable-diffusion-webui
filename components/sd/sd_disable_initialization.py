@@ -3,7 +3,7 @@ import open_clip
 import torch
 import transformers.utils.hub
 
-from modules import shared
+from components import shared
 
 
 class ReplaceHelper:

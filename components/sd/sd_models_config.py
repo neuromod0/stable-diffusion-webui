@@ -2,7 +2,7 @@ import os
 
 import torch
 
-from modules import shared, paths, sd_disable_initialization, devices
+from components import shared, paths, sd_disable_initialization, devices
 
 sd_configs_path = shared.sd_configs_path
 sd_repo_configs_path = os.path.join(paths.paths['Stable Diffusion'], "configs", "stable-diffusion")

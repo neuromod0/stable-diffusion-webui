@@ -3,8 +3,8 @@ import tqdm
 import k_diffusion.sampling
 import numpy as np
 
-from modules import shared
-from modules.models.diffusion.uni_pc import uni_pc
+from components import shared
+from components.models.diffusion.uni_pc import uni_pc
 
 
 @torch.no_grad()

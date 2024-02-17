@@ -1,11 +1,11 @@
 import torch
 import inspect
 import k_diffusion.sampling
-from modules import sd_samplers_common, sd_samplers_extra, sd_samplers_cfg_denoiser
-from modules.sd_samplers_cfg_denoiser import CFGDenoiser  # noqa: F401
-from modules.script_callbacks import ExtraNoiseParams, extra_noise_callback
+from components import sd_samplers_common, sd_samplers_extra, sd_samplers_cfg_denoiser
+from components.sd_samplers_cfg_denoiser import CFGDenoiser  # noqa: F401
+from components.script_callbacks import ExtraNoiseParams, extra_noise_callback
 
-from modules.shared import opts
+from components.shared import opts
 import modules.shared as shared
 
 samplers_k_diffusion = [

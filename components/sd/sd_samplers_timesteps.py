@@ -1,11 +1,11 @@
 import torch
 import inspect
 import sys
-from modules import devices, sd_samplers_common, sd_samplers_timesteps_impl
-from modules.sd_samplers_cfg_denoiser import CFGDenoiser
-from modules.script_callbacks import ExtraNoiseParams, extra_noise_callback
+from components import devices, sd_samplers_common, sd_samplers_timesteps_impl
+from components.sd_samplers_cfg_denoiser import CFGDenoiser
+from components.script_callbacks import ExtraNoiseParams, extra_noise_callback
 
-from modules.shared import opts
+from components.shared import opts
 import modules.shared as shared
 
 samplers_timesteps = [

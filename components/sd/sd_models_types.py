@@ -3,7 +3,7 @@ from typing import TYPE_CHECKING
 
 
 if TYPE_CHECKING:
-    from modules.sd_models import CheckpointInfo
+    from components.sd_models import CheckpointInfo
 
 
 class WebuiSdModel(LatentDiffusion):

@@ -13,8 +13,8 @@ import ldm.modules.midas as midas
 
 from ldm.util import instantiate_from_config
 
-from modules import paths, shared, modelloader, devices, script_callbacks, sd_vae, sd_disable_initialization, errors, hashes, sd_models_config, sd_unet, sd_models_xl, cache, extra_networks, processing, lowvram, sd_hijack, patches
-from modules.timer import Timer
+from components import paths, shared, modelloader, devices, script_callbacks, sd_vae, sd_disable_initialization, errors, hashes, sd_models_config, sd_unet, sd_models_xl, cache, extra_networks, processing, lowvram, sd_hijack, patches
+from components.timer import Timer
 import tomesd
 import numpy as np
 
@@ -598,7 +598,7 @@ def send_model_to_trash(m):
 
 
 def load_model(checkpoint_info=None, already_loaded_state_dict=None):
-    from modules import sd_hijack
+    from components import sd_hijack
     checkpoint_info = checkpoint_info or select_checkpoint()
 
     timer = Timer()

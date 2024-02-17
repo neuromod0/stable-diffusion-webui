@@ -3,8 +3,8 @@ from collections import namedtuple
 import numpy as np
 import torch
 from PIL import Image
-from modules import devices, images, sd_vae_approx, sd_samplers, sd_vae_taesd, shared, sd_models
-from modules.shared import opts, state
+from components import devices, images, sd_vae_approx, sd_samplers, sd_vae_taesd, shared, sd_models
+from components.shared import opts, state
 import k_diffusion.sampling
 
 
@@ -40,7 +40,7 @@ def samples_to_images_tensor(sample, approximation=None, model=None):
     if approximation is None or (shared.state.interrupted and opts.live_preview_fast_interrupt):
         approximation = approximation_indexes.get(opts.show_progress_type, 0)
 
-        from modules import lowvram
+        from components import lowvram
         if approximation == 0 and lowvram.is_enabled(shared.sd_model) and not shared.opts.live_preview_allow_lowvram_full:
             approximation = 1
 

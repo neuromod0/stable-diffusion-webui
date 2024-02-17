@@ -1,11 +1,11 @@
 import torch
-from modules import prompt_parser, devices, sd_samplers_common
+from components import prompt_parser, devices, sd_samplers_common
 
-from modules.shared import opts, state
+from components.shared import opts, state
 import modules.shared as shared
-from modules.script_callbacks import CFGDenoiserParams, cfg_denoiser_callback
-from modules.script_callbacks import CFGDenoisedParams, cfg_denoised_callback
-from modules.script_callbacks import AfterCFGCallbackParams, cfg_after_cfg_callback
+from components.script_callbacks import CFGDenoiserParams, cfg_denoiser_callback
+from components.script_callbacks import CFGDenoisedParams, cfg_denoised_callback
+from components.script_callbacks import AfterCFGCallbackParams, cfg_after_cfg_callback
 
 
 def catenate_conds(conds):
