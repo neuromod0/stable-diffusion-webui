@@ -10,9 +10,11 @@ import torch
 import tqdm
 from einops import rearrange, repeat
 from ldm.util import default
-from modules import devices, sd_models, shared, sd_samplers, hashes, sd_hijack_checkpoint, errors
-from modules.textual_inversion import textual_inversion, logging
-from modules.textual_inversion.learn_schedule import LearnRateScheduler
+from components import shared, hashes
+from utils import devices,errors
+from components.sd import sd_models, sd_samplers, sd_hijack_checkpoint
+from components.textual_inversion import textual_inversion, logging
+from components.textual_inversion.learn_schedule import LearnRateScheduler
 from torch import einsum
 from torch.nn.init import normal_, xavier_normal_, xavier_uniform_, kaiming_normal_, kaiming_uniform_, zeros_
 
@@ -469,7 +471,7 @@ def create_hypernetwork(name, enable_sizes, overwrite_old, layer_structure=None,
 
 
 def train_hypernetwork(id_task, hypernetwork_name: str, learn_rate: float, batch_size: int, gradient_step: int, data_root: str, log_directory: str, training_width: int, training_height: int, varsize: bool, steps: int, clip_grad_mode: str, clip_grad_value: float, shuffle_tags: bool, tag_drop_out: bool, latent_sampling_method: str, use_weight: bool, create_image_every: int, save_hypernetwork_every: int, template_filename: str, preview_from_txt2img: bool, preview_prompt: str, preview_negative_prompt: str, preview_steps: int, preview_sampler_name: str, preview_cfg_scale: float, preview_seed: int, preview_width: int, preview_height: int):
-    from modules import images, processing
+    from components import images, processing
 
     save_hypernetwork_every = save_hypernetwork_every or 0
     create_image_every = create_image_every or 0
