@@ -11,7 +11,7 @@ import re
 
 
 # PyTorch 1.13 and later have _TypedStorage renamed to TypedStorage
-from components import errors
+from utils import errors
 
 TypedStorage = torch.storage.TypedStorage if hasattr(torch.storage, 'TypedStorage') else torch.storage._TypedStorage
 
