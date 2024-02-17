@@ -35,7 +35,7 @@ def setup_model(dirname):
 
         net_class = CodeFormer
 
-        class FaceRestorerCodeFormer(modules.face_restoration.FaceRestoration):
+        class FaceRestorerCodeFormer(components.face_restoration.FaceRestoration):
             def name(self):
                 return "CodeFormer"
 
