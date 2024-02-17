@@ -3,9 +3,9 @@ from __future__ import annotations
 import os
 import time
 
-from modules import timer
-from modules import initialize_util
-from modules import initialize
+from utils import timer
+from components import initialize_util
+from components import initialize
 
 startup_timer = timer.startup_timer
 startup_timer.record("launcher")
