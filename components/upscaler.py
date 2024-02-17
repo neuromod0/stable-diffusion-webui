@@ -4,7 +4,7 @@ from abc import abstractmethod
 import PIL
 from PIL import Image
 
-import modules.shared
+import components.shared
 from components import modelloader, shared
 
 LANCZOS = (Image.Resampling.LANCZOS if hasattr(Image, 'Resampling') else Image.LANCZOS)
