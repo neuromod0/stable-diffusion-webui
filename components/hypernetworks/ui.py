@@ -7,11 +7,11 @@ from components.sd import sd_hijack
 from utils import devices
 
 not_available = ["hardswish", "multiheadattention"]
-keys = [x for x in modules.hypernetworks.hypernetwork.HypernetworkModule.activation_dict if x not in not_available]
+keys = [x for x in components.hypernetworks.hypernetwork.HypernetworkModule.activation_dict if x not in not_available]
 
 
 def create_hypernetwork(name, enable_sizes, overwrite_old, layer_structure=None, activation_func=None, weight_init=None, add_layer_norm=False, use_dropout=False, dropout_structure=None):
-    filename = modules.hypernetworks.hypernetwork.create_hypernetwork(name, enable_sizes, overwrite_old, layer_structure, activation_func, weight_init, add_layer_norm, use_dropout, dropout_structure)
+    filename = components.hypernetworks.hypernetwork.create_hypernetwork(name, enable_sizes, overwrite_old, layer_structure, activation_func, weight_init, add_layer_norm, use_dropout, dropout_structure)
 
     return gr.Dropdown.update(choices=sorted(shared.hypernetworks)), f"Created: {filename}", ""
 
@@ -24,7 +24,7 @@ def train_hypernetwork(*args):
     try:
         sd_hijack.undo_optimizations()
 
-        hypernetwork, filename = modules.hypernetworks.hypernetwork.train_hypernetwork(*args)
+        hypernetwork, filename = components.hypernetworks.hypernetwork.train_hypernetwork(*args)
 
         res = f"""
 Training {'interrupted' if shared.state.interrupted else 'finished'} at {hypernetwork.step} steps.
