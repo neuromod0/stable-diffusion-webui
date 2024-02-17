@@ -21,7 +21,7 @@ def initialize():
     if os.path.exists(shared.config_filename):
         shared.opts.load(shared.config_filename)
 
-    from components import devices
+    from utils import devices
     devices.device, devices.device_interrogate, devices.device_gfpgan, devices.device_esrgan, devices.device_codeformer = \
         (devices.cpu if any(y in cmd_opts.use_cpu for y in [x, 'all']) else devices.get_optimal_device() for x in ['sd', 'interrogate', 'gfpgan', 'esrgan', 'codeformer'])
 
@@ -43,7 +43,8 @@ def initialize():
     from components import shared_total_tqdm
     shared.total_tqdm = shared_total_tqdm.TotalTQDM()
 
-    from components import memmon, devices
+    from components import memmon
+    from utils import devices
     shared.mem_mon = memmon.MemUsageMonitor("MemMon", devices.device, shared.opts)
     shared.mem_mon.start()
 
