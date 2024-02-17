@@ -1,6 +1,6 @@
 import gradio as gr
 
-from components import localization, ui_components, shared_items, shared, interrogate, shared_gradio_themes
+from components import ui_components, shared_items, shared, interrogate, shared_gradio_themes
 from components.paths_internal import models_path, script_path, data_path, sd_configs_path, sd_default_config, sd_model_file, default_sd_model_file, extensions_dir, extensions_builtin_dir  # noqa: F401
 from components.shared_cmd_options import cmd_opts
 from components.options import options_section, OptionInfo, OptionHTML, categories
