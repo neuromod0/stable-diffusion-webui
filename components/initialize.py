@@ -121,7 +121,7 @@ def initialize_rest(*, reload_script_modules=False):
     startup_timer.record("refresh VAE")
 
     from components.textual_inversion import textual_inversion
-    textual_inversion.textual_inversion.list_textual_inversion_templates()
+    textual_inversion.list_textual_inversion_templates()
     startup_timer.record("refresh textual inversion templates")
 
     from components import script_callbacks
