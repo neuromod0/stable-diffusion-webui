@@ -66,7 +66,8 @@ def fix_asyncio_event_loop_policy():
 
 
 def restore_config_state_file():
-    from components import shared, config_states
+    from components import shared
+    from utils import config_states
 
     config_state_file = shared.opts.restore_config_state_file
     if config_state_file == "":
