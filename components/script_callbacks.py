@@ -6,8 +6,7 @@ from typing import Optional, Any
 from fastapi import FastAPI
 from gradio import Blocks
 
-from components import errors, timer
-
+from utils import errors, timer
 
 def report_exception(c, job):
     errors.report(f"Error executing callback {job} for {c.script}", exc_info=True)
