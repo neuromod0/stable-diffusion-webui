@@ -10,7 +10,7 @@ import tqdm
 from components.sd import sd_models, sd_vae, sd_models_config
 from components import images, shared
 from utils import errors
-from components.ui_common import plaintext_to_html
+from ui.ui_common import plaintext_to_html
 import gradio as gr
 import safetensors.torch
 
