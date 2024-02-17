@@ -1,7 +1,7 @@
 
 import gradio as gr
 
-from components import extras, 
+from components import extras
 from utils import call_queue,errors
 from components.ui_components import FormRow
 from components.ui_common import create_refresh_button
