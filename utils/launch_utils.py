@@ -13,7 +13,7 @@ from functools import lru_cache
 
 from utils import cmd_args, errors
 from components.paths_internal import script_path, extensions_dir
-from components.timer import startup_timer
+from utils.timer import startup_timer
 from components import logging_config
 
 args, _ = cmd_args.parser.parse_known_args()
