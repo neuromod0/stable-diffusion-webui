@@ -16,17 +16,20 @@ from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
 from secrets import compare_digest
 
-import modules.shared as shared
-from modules import sd_samplers, deepbooru, sd_hijack, images, scripts, ui, postprocessing, errors, restart, shared_items, script_callbacks, generation_parameters_copypaste, sd_models
-from modules.api import models
-from modules.shared import opts
-from modules.processing import StableDiffusionProcessingTxt2Img, StableDiffusionProcessingImg2Img, process_images
-from modules.textual_inversion.textual_inversion import create_embedding, train_embedding
-from modules.hypernetworks.hypernetwork import create_hypernetwork, train_hypernetwork
+import components.shared as shared
+from components.sd import sd_samplers, sd_hijack, sd_models
+from components.api import models
+from components import shared_items, script_callbacks,generation_parameters_copypaste,restart,deepbooru,images,scripts
+from utils import errors,devices
+from scripts import postprocessing
+from components.shared import opts
+from components.processing import StableDiffusionProcessingTxt2Img, StableDiffusionProcessingImg2Img, process_images
+from components.textual_inversion.textual_inversion import create_embedding, train_embedding
+from components.hypernetworks.hypernetwork import create_hypernetwork, train_hypernetwork
+from components.hypernetworks import ui
 from PIL import PngImagePlugin, Image
-from modules.sd_models_config import find_checkpoint_config_near_filename
-from modules.realesrgan_model import get_realesrgan_models
-from modules import devices
+from components.sd_models_config import find_checkpoint_config_near_filename
+from components.realesrgan_model import get_realesrgan_models
 from typing import Any
 import piexif
 import piexif.helper
@@ -755,7 +758,7 @@ class Api:
         return models.MemoryResponse(ram=ram, cuda=cuda)
 
     def get_extensions_list(self):
-        from modules import extensions
+        from components import extensions
         extensions.list_extensions()
         ext_list = []
         for ext in extensions.extensions:

@@ -3,8 +3,8 @@ import os
 import cv2
 import torch
 
-import modules.face_restoration
-import modules.shared
+import components.face_restoration
+import components.shared
 from components import shared, devices, modelloader, errors
 from components.paths import models_path
 

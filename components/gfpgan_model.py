@@ -3,8 +3,9 @@ import os
 import facexlib
 import gfpgan
 
-import modules.face_restoration
-from components import paths, shared, devices, modelloader, errors
+import components.face_restoration
+from components import paths, shared, modelloader
+from utils import devices, errors
 
 model_dir = "GFPGAN"
 user_path = None

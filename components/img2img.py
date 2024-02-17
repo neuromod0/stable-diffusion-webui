@@ -11,10 +11,10 @@ from components.generation_parameters_copypaste import create_override_settings_
 from components.processing import Processed, StableDiffusionProcessingImg2Img, process_images
 from components.shared import opts, state
 from components.sd_models import get_closet_checkpoint_match
-import modules.shared as shared
-import modules.processing as processing
+import components.shared as shared
+import components.processing as processing
 from components.ui import plaintext_to_html
-import modules.scripts
+import components.scripts
 
 
 def process_batch(p, input_dir, output_dir, inpaint_mask_dir, args, to_scale=False, scale_by=1.0, use_png_info=False, png_info_props=None, png_info_dir=None):

@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from components import devices
+from utils import devices
 
 # see https://github.com/AUTOMATIC1111/TorchDeepDanbooru for more
 

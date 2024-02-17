@@ -1,8 +1,9 @@
 import gradio as gr
 
-from modules import scripts, sd_models
-from modules.ui_common import create_refresh_button
-from modules.ui_components import InputAccordion
+from components.sd import , sd_models
+from components import scripts
+from ui.ui_common import create_refresh_button
+from ui.ui_components import InputAccordion
 
 
 class ScriptRefiner(scripts.ScriptBuiltinUI):

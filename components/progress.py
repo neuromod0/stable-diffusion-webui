@@ -7,7 +7,7 @@ from pydantic import BaseModel, Field
 
 from components.shared import opts
 
-import modules.shared as shared
+import components.shared as shared
 
 
 current_task = None

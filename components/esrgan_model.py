@@ -4,8 +4,9 @@ import numpy as np
 import torch
 from PIL import Image
 
-import modules.esrgan_model_arch as arch
-from components import modelloader, images, devices
+import components.esrgan_model_arch as arch
+from components import modelloader, images
+from utils import devices
 from components.shared import opts
 from components.upscaler import Upscaler, UpscalerData
 

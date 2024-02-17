@@ -7,8 +7,8 @@ from dataclasses import dataclass
 
 import gradio as gr
 
-from components import shared, paths, script_callbacks, extensions, script_loading, scripts_postprocessing, errors, timer
-
+from components import shared, paths, script_callbacks, extensions, script_loading, scripts_postprocessing
+from utils import errors,timer
 AlwaysVisible = object()
 
 

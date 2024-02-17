@@ -3,7 +3,8 @@
 import torch
 
 from .uni_pc import NoiseScheduleVP, model_wrapper, UniPC
-from modules import shared, devices
+from components import shared
+from utils import devices
 
 
 class UniPCSampler(object):

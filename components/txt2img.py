@@ -1,6 +1,6 @@
 from contextlib import closing
 
-import modules.scripts
+import components.scripts
 from components import processing
 from components.generation_parameters_copypaste import create_override_settings_dict
 from components.shared import opts

@@ -5,7 +5,8 @@ import os
 import threading
 import re
 
-from components import shared, errors, cache, scripts
+from components import shared, scripts
+from utils import errors,cache
 from components.gitpython_hack import Repo
 from components.paths_internal import extensions_dir, extensions_builtin_dir, script_path  # noqa: F401
 

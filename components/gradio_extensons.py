@@ -1,6 +1,7 @@
 import gradio as gr
 
-from components import scripts, ui_tempdir, patches
+from components import scripts, patches
+from ui import ui_tempdir
 
 
 def add_classes_to_gradio_component(comp):

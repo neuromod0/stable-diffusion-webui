@@ -2,9 +2,11 @@ import json
 
 import gradio as gr
 
-from modules import scripts, ui, errors
-from modules.shared import cmd_opts
-from modules.ui_components import ToolButton
+from components import scripts
+from utils import errors
+from components.shared import cmd_opts
+from ui.ui_components import ToolButton
+from ui import ui
 
 
 class ScriptSeed(scripts.ScriptBuiltinUI):

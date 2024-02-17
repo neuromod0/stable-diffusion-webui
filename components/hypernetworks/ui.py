@@ -1,7 +1,7 @@
 import html
 
 import gradio as gr
-import modules.hypernetworks.hypernetwork
+import components.hypernetworks.hypernetwork
 from components import devices, sd_hijack, shared
 
 not_available = ["hardswish", "multiheadattention"]
