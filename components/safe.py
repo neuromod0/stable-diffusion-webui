@@ -11,7 +11,7 @@ import re
 
 
 # PyTorch 1.13 and later have _TypedStorage renamed to TypedStorage
-from modules import errors
+from components import errors
 
 TypedStorage = torch.storage.TypedStorage if hasattr(torch.storage, 'TypedStorage') else torch.storage._TypedStorage
 
@@ -130,7 +130,7 @@ def load_with_extra(filename, extra_handler=None, *args, **kwargs):
     definitely unsafe.
     """
 
-    from modules import shared
+    from components import shared
 
     try:
         if not shared.cmd_opts.disable_safe_unpickle:
@@ -163,7 +163,7 @@ class Extra:
 
 ```
 import torch
-from modules import safe
+from components import safe
 
 def handler(module, name):
     if module == 'torch' and name in ['float64', 'float16']:

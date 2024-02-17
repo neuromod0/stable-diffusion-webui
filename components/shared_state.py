@@ -3,7 +3,7 @@ import logging
 import threading
 import time
 
-from modules import errors, shared, devices
+from components import errors, shared, devices
 from typing import Optional
 
 log = logging.getLogger(__name__)

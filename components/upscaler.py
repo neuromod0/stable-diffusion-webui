@@ -5,7 +5,7 @@ import PIL
 from PIL import Image
 
 import modules.shared
-from modules import modelloader, shared
+from components import modelloader, shared
 
 LANCZOS = (Image.Resampling.LANCZOS if hasattr(Image, 'Resampling') else Image.LANCZOS)
 NEAREST = (Image.Resampling.NEAREST if hasattr(Image, 'Resampling') else Image.NEAREST)

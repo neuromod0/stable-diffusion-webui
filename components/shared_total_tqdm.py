@@ -1,6 +1,6 @@
 import tqdm
 
-from modules import shared
+from components import shared
 
 
 class TotalTQDM:

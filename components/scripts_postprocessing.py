@@ -2,7 +2,7 @@ import dataclasses
 import os
 import gradio as gr
 
-from modules import errors, shared
+from components import errors, shared
 
 
 @dataclasses.dataclass

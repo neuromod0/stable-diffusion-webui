@@ -4,7 +4,7 @@ import re
 import logging
 from collections import defaultdict
 
-from modules import errors
+from components import errors
 
 extra_network_registry = {}
 extra_network_aliases = {}
@@ -24,7 +24,7 @@ def register_extra_network_alias(extra_network, alias):
 
 
 def register_default_extra_networks():
-    from modules.extra_networks_hypernet import ExtraNetworkHypernet
+    from components.extra_networks_hypernet import ExtraNetworkHypernet
     register_extra_network(ExtraNetworkHypernet())
 
 

@@ -6,14 +6,14 @@ import numpy as np
 from PIL import Image, ImageOps, ImageFilter, ImageEnhance, UnidentifiedImageError
 import gradio as gr
 
-from modules import images as imgutil
-from modules.generation_parameters_copypaste import create_override_settings_dict, parse_generation_parameters
-from modules.processing import Processed, StableDiffusionProcessingImg2Img, process_images
-from modules.shared import opts, state
-from modules.sd_models import get_closet_checkpoint_match
+from components import images as imgutil
+from components.generation_parameters_copypaste import create_override_settings_dict, parse_generation_parameters
+from components.processing import Processed, StableDiffusionProcessingImg2Img, process_images
+from components.shared import opts, state
+from components.sd_models import get_closet_checkpoint_match
 import modules.shared as shared
 import modules.processing as processing
-from modules.ui import plaintext_to_html
+from components.ui import plaintext_to_html
 import modules.scripts
 
 

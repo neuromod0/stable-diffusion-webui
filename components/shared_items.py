@@ -1,6 +1,6 @@
 import sys
 
-from modules.shared_cmd_options import cmd_opts
+from components.shared_cmd_options import cmd_opts
 
 
 def realesrgan_models_names():
@@ -60,14 +60,14 @@ def list_samplers():
 
 
 def reload_hypernetworks():
-    from modules.hypernetworks import hypernetwork
-    from modules import shared
+    from components.hypernetworks import hypernetwork
+    from components import shared
 
     shared.hypernetworks = hypernetwork.list_hypernetworks(cmd_opts.hypernetwork_dir)
 
 
 def get_infotext_names():
-    from modules import generation_parameters_copypaste, shared
+    from components import generation_parameters_copypaste, shared
     res = {}
 
     for info in shared.opts.data_labels.values():
@@ -99,7 +99,7 @@ ui_reorder_categories_builtin_items = [
 
 
 def ui_reorder_categories():
-    from modules import scripts
+    from components import scripts
 
     yield from ui_reorder_categories_builtin_items
 

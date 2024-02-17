@@ -5,9 +5,9 @@ import torch
 from PIL import Image
 
 import modules.esrgan_model_arch as arch
-from modules import modelloader, images, devices
-from modules.shared import opts
-from modules.upscaler import Upscaler, UpscalerData
+from components import modelloader, images, devices
+from components.shared import opts
+from components.upscaler import Upscaler, UpscalerData
 
 
 def mod2normal(state_dict):

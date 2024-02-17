@@ -4,8 +4,8 @@ from dataclasses import dataclass
 
 import gradio as gr
 
-from modules import errors
-from modules.shared_cmd_options import cmd_opts
+from components import errors
+from components.shared_cmd_options import cmd_opts
 
 
 class OptionInfo:

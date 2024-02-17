@@ -1,7 +1,7 @@
 import hashlib
 import os.path
 
-from modules import shared
+from components import shared
 import modules.cache
 
 dump_cache = modules.cache.dump_cache

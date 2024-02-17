@@ -1,11 +1,11 @@
 from contextlib import closing
 
 import modules.scripts
-from modules import processing
-from modules.generation_parameters_copypaste import create_override_settings_dict
-from modules.shared import opts
+from components import processing
+from components.generation_parameters_copypaste import create_override_settings_dict
+from components.shared import opts
 import modules.shared as shared
-from modules.ui import plaintext_to_html
+from components.ui import plaintext_to_html
 import gradio as gr
 
 

@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 
-from modules.paths_internal import script_path
+from components.paths_internal import script_path
 
 
 def is_restartable() -> bool:

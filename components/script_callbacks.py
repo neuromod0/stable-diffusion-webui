@@ -6,7 +6,7 @@ from typing import Optional, Any
 from fastapi import FastAPI
 from gradio import Blocks
 
-from modules import errors, timer
+from components import errors, timer
 
 
 def report_exception(c, job):

@@ -1,7 +1,7 @@
 import os
 import importlib.util
 
-from modules import errors
+from components import errors
 
 
 def load_module(path):

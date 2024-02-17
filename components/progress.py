@@ -5,7 +5,7 @@ import time
 import gradio as gr
 from pydantic import BaseModel, Field
 
-from modules.shared import opts
+from components.shared import opts
 
 import modules.shared as shared
 
