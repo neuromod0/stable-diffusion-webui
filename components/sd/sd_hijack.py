@@ -174,7 +174,7 @@ class StableDiffusionModelHijack:
     optimization_method = None
 
     def __init__(self):
-        import modules.textual_inversion.textual_inversion
+        import components.textual_inversion.textual_inversion
 
         self.extra_generation_params = {}
         self.comments = []
@@ -261,11 +261,11 @@ class StableDiffusionModelHijack:
 
         self.layers = flatten(m)
 
-        import modules.models.diffusion.ddpm_edit
+        import components.models.diffusion.ddpm_edit
 
         if isinstance(m, ldm.models.diffusion.ddpm.LatentDiffusion):
             sd_unet.original_forward = ldm_original_forward
-        elif isinstance(m, modules.models.diffusion.ddpm_edit.LatentDiffusion):
+        elif isinstance(m, components.models.diffusion.ddpm_edit.LatentDiffusion):
             sd_unet.original_forward = ldm_original_forward
         elif isinstance(m, sgm.models.diffusion.DiffusionEngine):
             sd_unet.original_forward = sgm_original_forward
