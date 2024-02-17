@@ -29,7 +29,7 @@ import components.textual_inversion.ui as textual_inversion_ui
 import components.textual_inversion.textual_inversion as textual_inversion
 import components.shared as shared
 from components import prompt_parser
-from components.sd_hijack import model_hijack
+from components.sd.sd_hijack import model_hijack
 from components.generation_parameters_copypaste import image_from_url_text
 
 create_setting_component = ui_settings.create_setting_component
