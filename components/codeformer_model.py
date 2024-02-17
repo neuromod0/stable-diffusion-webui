@@ -5,7 +5,8 @@ import torch
 
 import components.face_restoration
 import components.shared
-from components import shared, devices, modelloader, errors
+from components import shared, modelloader
+from utils import devices, errors
 from components.paths import models_path
 
 # codeformer people made a choice to include modified basicsr library to their project which makes

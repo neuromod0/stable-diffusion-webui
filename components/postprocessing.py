@@ -2,8 +2,10 @@ import os
 
 from PIL import Image
 
-from components import shared, images, devices, scripts, scripts_postprocessing, ui_common, generation_parameters_copypaste
+from components import shared, images, scripts, scripts_postprocessing, generation_parameters_copypaste
 from components.shared import opts
+from ui import ui_common
+from utils import devices
 
 
 def run_postprocessing(extras_mode, image, image_folder, input_dir, output_dir, show_extras_results, *args, save_output: bool = True):
