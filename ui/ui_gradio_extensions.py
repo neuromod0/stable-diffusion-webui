@@ -4,7 +4,6 @@ import gradio as gr
 from components import shared, scripts
 from components.paths import script_path, data_path, cwd
 
-
 def webpath(fn):
     if fn.startswith(cwd):
         web_path = os.path.relpath(fn, cwd)
@@ -16,7 +15,7 @@ def webpath(fn):
 
 def javascript_html():
     # Ensure localization is in `window` before scripts
-    script_js = os.path.join(script_path, "script.js")
+    script_js = os.path.join(script_path+"ui/", "script.js")
     head = f'<script type="text/javascript" src="{webpath(script_js)}"></script>\n'
 
     for script in scripts.list_scripts("javascript", ".js"):
